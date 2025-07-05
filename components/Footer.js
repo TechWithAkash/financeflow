@@ -1,6 +1,7 @@
 'use client';
 
 import { Heart, Github, Mail, Globe, Shield, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -25,20 +26,20 @@ export default function Footer() {
               Track expenses, set budgets, and achieve your financial goals with ease.
             </p>
             <div className="flex items-center space-x-4">
-              <a 
-                href="#" 
+              <Link
+                href="https://github.com/TechWithAkash/financeflow?tab=readme-ov-file#financeflow-" 
                 className="flex items-center justify-center w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all duration-200 hover:scale-105"
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5 text-gray-300" />
-              </a>
-              <a 
-                href="#" 
+              </Link>
+              <Link
+                href="https://github.com/TechWithAkash/financeflow?tab=readme-ov-file#financeflow-" 
                 className="flex items-center justify-center w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all duration-200 hover:scale-105"
                 aria-label="Website"
               >
                 <Globe className="w-5 h-5 text-gray-300" />
-              </a>
+              </Link>
               <a 
                 href="#" 
                 className="flex items-center justify-center w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all duration-200 hover:scale-105"
@@ -104,23 +105,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Security Badge */}
-        <div className="py-6 border-t border-gray-800">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div className="flex items-center space-x-3">
-              <div className="flex items-center justify-center w-8 h-8 bg-green-600/20 rounded-lg">
-                <Shield className="w-4 h-4 text-green-400" />
-              </div>
-              <div>
-                <p className="text-sm font-medium text-green-400">Bank-Level Security</p>
-                <p className="text-xs text-gray-400">Your data is encrypted and secure</p>
-              </div>
-            </div>
-            <div className="text-sm text-gray-400">
-              Built with modern web technologies
-            </div>
-          </div>
-        </div>
 
         {/* Bottom Bar */}
         <div className="py-6 border-t border-gray-800">

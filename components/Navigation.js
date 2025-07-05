@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Home, CreditCard, BarChart3, Menu, X, DollarSign, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-export default function Navigation({ currentTab, onTabChange }) {
+export default function Navigation({ currentTab, onTabChange, onBackToLanding }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const tabs = [
@@ -29,18 +29,22 @@ export default function Navigation({ currentTab, onTabChange }) {
     <nav className="bg-gradient-to-br shadow-sm from-slate-50  to-indigo-50 backdrop-blur-xl sticky top-0 z-50 p-2 " role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo and Brand */}
-          <div className="flex items-center space-x-3">
+          {/* Logo and Brand - Clickable */}
+          <button 
+            onClick={onBackToLanding}
+            className="flex items-center space-x-3 hover:opacity-90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-xl p-2 -m-2"
+            aria-label="Back to Landing Page"
+          >
             <div className="flex items-center justify-center w-11 h-11 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-hidden="true">
               <DollarSign className="w-6 h-6 text-white" />
             </div>
             <div className="">
-              <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              <h1 className="text-xl font-bold text-gray-900 bg-clip-text ">
                 FinanceFlow
               </h1>
               <p className="text-xs text-gray-500 font-medium -mt-0.5">Personal Finance Manager</p>
             </div>
-          </div>
+          </button>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-2">
