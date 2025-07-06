@@ -138,6 +138,53 @@ export default function Charts() {
         </div>
       </div>
 
+      {/* Summary Cards  */}
+      {hasData && (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-xl transition-all duration-300 group">
+            <CardContent className="p-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-medium text-blue-900">Total Categories</p>
+                  <p className="text-2xl font-bold text-blue-900">{categoryData.length}</p>
+                </div>
+                <div className="p-2 bg-blue-500 rounded-lg group-hover:bg-blue-600 transition-colors duration-200">
+                  <PieChartIcon className="w-5 h-5 text-white" />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-0 shadow-lg bg-gradient-to-br from-green-50 to-green-100 hover:shadow-xl transition-all duration-300 group">
+            <CardContent className="p-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-medium text-green-900">Months Tracked</p>
+                  <p className="text-2xl font-bold text-green-900">{monthlyData.length}</p>
+                </div>
+                <div className="p-2 bg-green-500 rounded-lg group-hover:bg-green-600 transition-colors duration-200">
+                  <Calendar className="w-5 h-5 text-white" />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-0 shadow-lg bg-gradient-to-br from-purple-50 to-purple-100 hover:shadow-xl transition-all duration-300 group">
+            <CardContent className="p-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-medium text-purple-900">Budget Categories</p>
+                  <p className="text-2xl font-bold text-purple-900">{budgetData.length}</p>
+                </div>
+                <div className="p-2 bg-purple-500 rounded-lg group-hover:bg-purple-600 transition-colors duration-200">
+                  <DollarSign className="w-5 h-5 text-white" />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      )}
+
       {!hasData ? (
         <div className="text-center py-16">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full mb-4">
@@ -291,53 +338,6 @@ export default function Charts() {
               </CardContent>
             </Card>
           )}
-        </div>
-      )}
-
-      {/* Summary Cards */}
-      {hasData && (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-xl transition-all duration-300 group">
-            <CardContent className="p-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-blue-900">Total Categories</p>
-                  <p className="text-2xl font-bold text-blue-900">{categoryData.length}</p>
-                </div>
-                <div className="p-2 bg-blue-500 rounded-lg group-hover:bg-blue-600 transition-colors duration-200">
-                  <PieChartIcon className="w-5 h-5 text-white" />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="border-0 shadow-lg bg-gradient-to-br from-green-50 to-green-100 hover:shadow-xl transition-all duration-300 group">
-            <CardContent className="p-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-green-900">Months Tracked</p>
-                  <p className="text-2xl font-bold text-green-900">{monthlyData.length}</p>
-                </div>
-                <div className="p-2 bg-green-500 rounded-lg group-hover:bg-green-600 transition-colors duration-200">
-                  <Calendar className="w-5 h-5 text-white" />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="border-0 shadow-lg bg-gradient-to-br from-purple-50 to-purple-100 hover:shadow-xl transition-all duration-300 group">
-            <CardContent className="p-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-purple-900">Budget Categories</p>
-                  <p className="text-2xl font-bold text-purple-900">{budgetData.length}</p>
-                </div>
-                <div className="p-2 bg-purple-500 rounded-lg group-hover:bg-purple-600 transition-colors duration-200">
-                  <DollarSign className="w-5 h-5 text-white" />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       )}
     </div>

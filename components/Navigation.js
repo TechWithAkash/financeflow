@@ -26,7 +26,7 @@ export default function Navigation({ currentTab, onTabChange, onBackToLanding })
   };
 
   return (
-    <nav className="bg-gradient-to-br shadow-sm from-slate-50  to-indigo-50 backdrop-blur-xl sticky top-0 z-50 p-2 " role="navigation" aria-label="Main navigation">
+    <nav className="bg-gradient-to-br from-slate-50  to-indigo-50 backdrop-blur-xl sticky top-0 z-50 p-2 " role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Brand - Clickable */}
